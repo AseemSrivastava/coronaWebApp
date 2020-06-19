@@ -12,9 +12,8 @@ app.use(express.static("public"));
 
 
 app.get("/", function(req, res){
-    api.countries().then(function(result){
+    api.countries({sort:'cases'}).then(function(result){
         res.render("index", {datas : result});
-        console.log(result);
         
     }).catch(function(err){
         console.log(err);
