@@ -10,6 +10,28 @@
     <!-- <link rel="stylesheet" type="text/css" href=""> -->
     <link rel="stylesheet" href="/css/screening_index.css">
 </head>
+
+<style>
+    .grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+    }
+
+    .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    /* text-align: left; */
+    }
+    .test{
+        margin-top: 100px;
+    }
+</style>
+
 <body>
     <div >
         <ul>
@@ -20,16 +42,18 @@
           <li><a class="SCREENING" href="/screening">SCREENING</a></li>
         </ul>
     </div>
-    <div class="center">
-        <% datas.forEach(function(data){  %>
-            <h1 class='countryname' > <%= data.country %> </h1>
-            <img src=<%= data.countryInfo.flag %> alt="data.country">
-            <div class="cases">
-                <h3 class='text-warning' >Total Cases: <%= data.cases %></h3>
-                <h3 class='text-danger' >Total Deaths: <%= data.deaths %></h3>
-                <h3 class='text-success' >Total Recovered: <%= data.recovered %></h3>
-            </div>
-      <%  });   %>
+    <div class="grid-container test">
+            <% datas.forEach(function(data){  %>
+                <div class=".grid-item">
+                    <h1 class='countryname' > <%= data.country %> </h1>
+                    <img src=<%= data.countryInfo.flag %> alt="data.country">
+                    <div class="cases">
+                        <h4 class='text-warning' >Total Cases: <%= data.cases %></h4>
+                        <h4 class='text-danger' >Total Deaths: <%= data.deaths %></h4>
+                        <h4 class='text-success' >Recovered: <%= data.recovered %></h4>
+                    </div>
+                </div>
+          <%  });   %>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
