@@ -25,6 +25,15 @@ app.get("/news", function(req, res){
           console.log('body:', content);
     });
 });
+
+app.get("/screening", function(req, res){
+  res.render("screening");
+});
+
+app.get("/questions", function(req, res){
+  res.render("questions");
+});
+
 var fs = require('fs');
 app.get("/map", function(req, res){
   api.countries().then(function(result){
