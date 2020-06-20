@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" href="/css/screening_index.css">
 </head>
 <body>
+    <div class="navbar">
+        <ul>
+          <li><a class="HOME" href="/">HOME</a></li>
+          <li><a class="NEWS" href="/news" >NEWS</a></li>
+          <li><a class="CHAT" href="/chat">CHAT</a></li>
+          <li><a class="MAP" href="/map">MAP</a></li>
+          <li><a class="SCREENING" href="/screening">SCREENING</a></li>
+        </ul>
+    </div>
     <div class="center">
-        <% datas.forEach(function(data){    %>
+        <% datas.forEach(function(data){  %>
             <h1 class='countryname' > <%= data.country %> </h1>
             <img src=<%= data.countryInfo.flag %> alt="data.country">
             <div class="cases">
