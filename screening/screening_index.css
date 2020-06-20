@@ -12,7 +12,9 @@ ul {
   top: 0;
   width: 100%;
 }
-
+a {
+  text-decoration: none;
+}
 li {
   float: left;
 }
@@ -28,6 +30,7 @@ li a {
 li a:hover:not(.NEWS) {
   background-color: white;
   color: black;
+  text-decoration: none;
 }
 
 .NEWS {
