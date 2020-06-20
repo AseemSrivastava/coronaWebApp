@@ -36,7 +36,6 @@ app.get("/news", function(req, res){
         request('https://covid-19india-api.herokuapp.com/headlines', function (error, response, body) {
           var content = JSON.parse(body);
           res.render("news",{datas : content});
-          console.log('body:', content);
     });
 });
 
@@ -48,7 +47,6 @@ app.get("/questions", function(req, res){
   res.render("questions");
 });
 
-var fs = require('fs');
 app.get("/map", function(req, res){
   api.countries().then(function(result){
         var arr = [];
